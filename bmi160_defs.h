@@ -358,8 +358,14 @@
 #define BMI160_W_GYRO_SELF_TEST_FAIL         INT8_C(1)
 #define BMI160_W_ACCEl_SELF_TEST_FAIL        INT8_C(2)
 
-/** BMI160 unique chip identifier */
-#define BMI160_CHIP_ID                       UINT8_C(0xD1)
+/** BMI160 unique chip identifier 
+ *
+ * This driver is being used with the BMX160 which is a BMI160 and BMM150 
+ * in the same package. The chip ID however is different than the 
+ * BMI160
+ */
+//#define BMI160_CHIP_ID                       UINT8_C(0xD1)
+#define BMI160_CHIP_ID                       UINT8_C(0xD8)   
 
 /** Soft reset command */
 #define BMI160_SOFT_RESET_CMD                UINT8_C(0xb6)
